@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan";
+}
+main{
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+}
+body{
+    font-size: 12px;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    margin-bottom: 0;
+}
+.arrows button{
+    border:none;
+    background-color: transparent;
+
+}
+.container header{
+    background-image: url("images/desktop-image-hero-1.jpg");
+    background-repeat: no-repeat;
+    width: 55%;
+    height: 70vh;
+    padding: 60px;
+    background-size: cover;
+    flex-grow: 1;
+    display: flex;
+    margin: 0;
+}
+.container .logo{
+    margin-right: 50px;
+}
+.container .logo img{
+    width: 100%;
+}
+.container header ul li{
+    list-style-type: none;
+    display: inline;
+    align-self: center;
+    color:hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding: 22px;
+    font-size: 16px;
+    position:relative;
+    transition: .3s ease;
+}
+.container header ul li:hover{
+    cursor:pointer;
+}
+.container header ul li:hover::after{
+    content: "";
+    transition: .3s ease;
+    width:30%;
+    height: 2px;
+    position:absolute;
+    margin:auto;
+    background-color: hsl(0,0%,100%);
+    bottom:10%;
+    left: 0;
+    right: 0;
+}
+.container1 .item{
+    width: 40vw;
+    position:relative;
+    padding: 110px;
+    padding-bottom: 0;
+}
+.container .item h1{
+    font-size: 2.9rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.container .item p{
+    color:hsl(0, 0%, 63%);
+    line-height: 24px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    width: 100%;
+    height: 150px;
+}
+.container .item a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:hsl(0, 0%, 0%);
+    letter-spacing: 11px;
+    display: flex;
+    gap:30px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.container .item a:hover{
+    cursor:pointer;
+    opacity: 0.4;
+}
+
+.container1 .item .arrows{
+    position:absolute;
+    align-self: flex-start;
+    background-color: hsl(0,0%,0%);
+    width: 10.53vw;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+}
+.container1 .item .arrows .arrow{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease;
+}
+.container1 .item .arrows .arrow:hover{
+    background-color:hsl(0, 0%, 27%) ;
+}
+.container2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0;
+    margin: 0;
+}
+.container2 .grid-item{
+    height: 30vh;
+    padding: 0;
+    margin: 0;
+}
+
+.container2 .grid-item1{
+    background-image: url("images/image-about-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    padding: 0;
+    margin: 0;
+}
+.container2 .grid-item2{
+    padding:40px 60px;
+    padding-bottom: 10px;
+    height: 100%;
+    width: 40vw;
+}
+.container2 .grid-item2 h2{
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.container .grid-item2 p{
+    font-size: 16px;
+    color:hsl(0, 0%, 63%);
+    line-height: 24px;
+    width: 90%;
+}
+.container2 .grid-item3{
+    background-image: url("images/image-about-light.jpg");
+    background-size: cover;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+}
+.container header .bar{
+    display:none;
+}
+.container header ul .close{
+    display:none;
+}
+
+
+
+/* responsive for mobile max width 375px */
+@media (max-width:375px){
+    
+    .container header ul{
+        display: none;
+    }
+    .container header{
+        display: flex;  
+        align-items: flex-start;
+        position:relative;
+        height:400px;
+        width: 100%;
+        padding:30px;
+        
+    }
+    
+    
+    .container .logo{
+        margin-right: 0;
+    }
+    .container header .bar{
+        display: block;
+        margin-right: auto;
+        float:left;
+        position: relative;
+        top:0;
+        left:0;
+    }
+    .container header .bar i{
+        color:hsl(0, 0%, 100%);
+        font-size: 1.2rem;
+    }
+    .container header ul.active{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 9999;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        width: 100%;
+        height: 100px;
+        background-color: hsl(0,0%,100%);
+        padding: 0 10px;
+        transition: 3s ease;
+    }
+    
+    .container header ul.active li{
+        color: hsl(0, 0%, 0%);
+        padding: 15px;
+    }
+    .container header .logo{
+        margin: 0;
+        padding: 4px 0;
+        margin-right: auto;
+    }
+    .container header ul .close{
+        display: inline;
+        margin-right: auto;
+        opacity: 0.2;
+        transition: 3s;
+    }
+    .container header ul.active::after {
+        background-color: rgba(0, 0, 0, 0.571);
+        content: "";
+        position:absolute;
+        width:100%;
+        height: 100%;
+        top:100px;
+        height: 100vh;
+        left:0;
+        transition: 3s ;
+    }
+    .container header ul .close i{
+        font-size: 1.4rem;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+        width: 100vw;
+    }
+    
+    .container .item{
+        width: 100%;
+        padding:80px 24px;
+    }
+    .container .item h1{
+        font-size: 2.2rem;
+    }
+    .container .item p{
+        height: 100%;
+        line-height: 22px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .container .item a{
+        margin-top: 30px;
+    }
+    .container .item .arrows{
+        right:0;
+        left:70vw;
+        width: 30vw;
+        height: 60px;
+        top: -60px;
+    }
+    .container2{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .container2 .grid-item{
+        width: 100%;
+        height: 250px;
+    }
+    .container2 .grid-item2{
+        padding:50px 25px;
+        height: 350px;   
+    }
+    .container2 .grid-item2 h2{
+        letter-spacing: 3px;
+    }
+    .container2 .grid-item2 p{
+        line-height: 22px;
+        width: 100%;
+    }
+}
+@media (max-width:475px){
+    
+    .container header ul{
+        display: none;
+    }
+    .container header{
+        display: flex;  
+        align-items: flex-start;
+        position:relative;
+        height:350px;
+        width: 100%;
+        padding:30px;
+        
+    }
+    .container2 .grid-item{
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .container .logo{
+        margin-right: 0;
+    }
+    .container header .bar{
+        display: block;
+        margin-right: auto;
+        float:left;
+        position: relative;
+        top:0;
+        left:0;
+    }
+    .container header .bar i{
+        color:hsl(0, 0%, 100%);
+        font-size: 1.2rem;
+    }
+    .container header ul.active{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 9999;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        width: 100%;
+        height: 100px;
+        background-color: hsl(0,0%,100%);
+        padding: 0 10px;
+        transition: 3s ease;
+    }
+    
+    .container header ul.active li{
+        color: hsl(0, 0%, 0%);
+        padding: 15px;
+    }
+    .container header .logo{
+        margin: 0;
+        padding: 4px 0;
+        margin-right: auto;
+    }
+    .container header ul .close{
+        display: inline;
+        margin-right: auto;
+        opacity: 0.2;
+        transition: 3s;
+    }
+    .container header ul.active::after {
+        background-color: rgba(0, 0, 0, 0.571);
+        content: "";
+        position:absolute;
+        width:100%;
+        height: 100%;
+        top:100px;
+        height: 100vh;
+        left:0;
+        transition: 3s ;
+    }
+    .container header ul .close i{
+        font-size: 1.4rem;
+    }
+    
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+        width: 100vw;
+    }
+    
+    .container .item{
+        width: 100%;
+        padding:80px 24px;
+    }
+    .container .item h1{
+        font-size: 2.2rem;
+    }
+    .container .item p{
+        height: 100%;
+        line-height: 22px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .container .item a{
+        margin-top: 30px;
+    }
+    .container .item .arrows{
+        right:0;
+        left:70vw;
+        width: 30vw;
+        height: 60px;
+        top: -60px;
+    }
+    .container2{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .container2 .grid-item{
+        width: 100%;
+        height: 250px;
+    }
+    .container2 .grid-item2{
+        padding:50px 25px;
+        height: 350px;   
+    }
+    .container2 .grid-item2 h2{
+        letter-spacing: 3px;
+    }
+    .container2 .grid-item2 p{
+        line-height: 22px;
+        width: 100%;
+    }
+}
+
